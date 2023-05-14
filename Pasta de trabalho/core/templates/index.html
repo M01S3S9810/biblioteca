@@ -1,0 +1,53 @@
+{% load static  %}
+<DOCTYPE html>
+<html language="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css'%}">
+</head>
+<style>
+    h1{
+        font-family: 'Courier New';
+        font-size: 100px;
+    }
+</style>
+<!---->
+<body>
+    <h1>BiblioFácil</h1>
+
+
+    <h2>{{ curso }}</h2>
+
+    <p>{{ outro }}</p>
+
+    <p class="creator">--------------------------------</p>
+
+    <h3>Alunos cadastrados até o momento na área</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Série</th>
+
+            </tr>
+        </thead>
+        <!--Tabela de alunos cadastrado e seus ids-->
+
+        <tbody>
+            {% for aluno in alunos%}
+                <tr>
+                    <td><a href="{% url 'aluno' aluno.id%}">{{ aluno.nome }}</a></td>
+                    <td>{{ aluno.sobrenome }}</td>
+                    <td>{{ aluno.serie }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <button onclick="teste();"><a href="http://127.0.0.1:8000/painel/" class="link_two">Clique-me</a></button>
+    <script type="text/javascript" src="{%static 'js/script.js'%}">
+</body>
+</html>

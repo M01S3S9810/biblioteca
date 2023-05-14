@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset="UTF-8">
+    <title>Aluno</title>
+</head>
+<body>
+
+    <h1>Aluno<h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+    
+            </tr>
+        </thead>
+            <!--Tabela de alunos cadastrado e seus ids-->
+            
+        <tbody>
+            {% for aluno in alunos%}
+                <tr>
+                    <td><a href="{% url 'index' %}">{{ aluno.nome }}</a></td>
+                    <td>{{ aluno.sobrenome }}</td>
+                    <td>{{ aluno.serie }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+<html>

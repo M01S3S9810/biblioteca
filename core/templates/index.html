@@ -1,0 +1,63 @@
+{% load static  %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/script.js' %}"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Website</title>
+</head>
+<body>
+    <div class="banner-img"></div>
+    <div class="banner-text">
+    <header>
+        <nav class="navigation">
+            <a href="a" class="logo">BiblioFácil</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#nav-section">Navegar</a></li>
+                <li class="nav-item"><a href="http://127.0.0.1:8000/painel/">Logar</a></li>
+                <li class="nav-item"><a href="#">Menu</a></li>
+                <i class='bx bx-search'></i>
+            </ul>
+
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="home">
+            <div class="home-text">
+                <div class="glass">
+                    <h4 class="text-h4">Bem vindo ao Biblio Fácil!</h4>
+                    <h1 class="text-h1">Organize de maneira prática a sua biblioteca</h1>
+                    <p>Use do nosso serviço de maneira simples</p>
+                    <a href="http://127.0.0.1:8000/painel/" class="home-btn">Acessar</a>
+                </div>
+    
+            </div>
+            
+            <div class="home-img">
+                <img src="{% static 'image/logo do projeto.PNG' %}" width="500px" style="cursor: pointer">
+            </div>
+        </section>
+
+        <!--Seção para pesquisa-->
+    </main>
+    <script src="script.js"></script>
+    </div>
+
+    <!--Imagens do site-->
+
+   
+</body>
+</html>
+
